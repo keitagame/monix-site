@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONIX ~one task to one system~</title>
+    <style>
+         @font-face {
+      font-family: "Renner";
+      src: url("./Renner.ttf") format("truetype");
+      font-display: swap;
+    }
+       body{
+        margin:0;
+       }
+     .title{
+        margin:0;
+        text-align:center;
+        font-size:10em;
+        font-family:"Renner";
+     }
+     .mm{
+        
+        margin:0;
+        text-align:center;
+        font-size:3em;
+        font-family:"Renner";
+     }
+     /* ナビバー全体の背景とスタイル */
+.navbar {
+  background-color: #000000; /* 暗いグレーの背景 */
+  padding: 30px 20px;
+}
+
+/* リストの黒丸を消して横並びにする */
+.nav-links {
+  list-style: none; /* 黒丸を非表示 */
+  margin: 0;
+  padding: 0;
+  display: flex; /* 子要素を横並びにする */
+  gap: 20px; /* リンク同士の間隔 */
+}
+
+/* リンクテキストの見た目 */
+.nav-links a {
+  color: #fff; /* 文字色を白に */
+  text-decoration: none; /* 下線を消す */
+  font-size: 16px;
+
+  transition: color 0.3s; /* ホバー時の変化を滑らかに */
+}
+
+/* マウスを乗せたときの色の変化 */
+.nav-links a:hover {
+  color: #ff9900; /* オレンジ色に変化 */
+}
+
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+  <ul class="nav-links">
+    <li><a href="#home">ホーム</a></li>
+    <li><a href="#about">概要</a></li>
+    <li><a href="#services">コミュニティ</a></li>
+    <li><a href="#contact">貢献する方法</a></li>
+  </ul>
+</nav>
+
+    <h1 class="title">MONIX</h1>
+    <div class="mm"><span style="background:blue;color:white;">ONE</span> TASK TO <span style="background:blue;color:white;">ONE</span> SYSTEM.</div>
+</body>
+</html>
