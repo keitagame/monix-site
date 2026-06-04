@@ -14,6 +14,10 @@
       font-display: swap;
     }
 body{
+  -webkit-user-select: none; /* Safari, Chrome */
+  -moz-user-select: none;    /* Firefox */
+  -ms-user-select: none;     /* IE/Edge */
+  user-select: none;         /* 標準の仕様 */
 background-image: url("https://greenz.jp/main/wp-content/uploads/2012/12/1398244602_c99e646e4d_b.jpg");
             
             /* 2. 画像を画面いっぱいに拡大縮小（比率保持） */
@@ -33,22 +37,109 @@ font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 700;
 color:white;
   font-size:20em;
+  transform: translateY(100%); 
+  /* アニメーションの指定（0.8秒かけて滑らかに） */
+  animation: slideFromBottom 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+@keyframes slideFromBottom {
+  to {
+    transform: translateY(0); /* 元の位置（枠の中）に戻る */
+  }
+}
+.n{
+
+height:100vh;
+width:100vw;
+
+display:grid;
 }
 .m{
-height:100vh;
-display:flex;
 justify-content:center;
+height:100%;
+display:flex;
 align-items:end;
 }
 .k{
 font-family:"S";
 }
+/* ナビバー全体のスタイル */
+.navbar {
+  background-color: #33333300; /* 背景色（暗いグレー） */
+  padding: 15px 0;
+}
+
+/* コンテナで左右の余白を調整し、要素を横並びにする */
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between; /* ロゴとメニューを左右両端に配置 */
+  align-items: center; /* 上下中央揃え */
+}
+
+/* ロゴのスタイル */
+.nav-logo {
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+  
+}
+
+/* メニュー全体のスタイル（リストマークを消して横並びに） */
+.nav-links {
+  list-style: none; /* 点マークを消す */
+  margin: 0;
+  padding: 0;
+  display: flex; /* リンクを横並びにする */
+  gap: 20px; /* リンク同士の間隔 */
+}
+
+/* リンクテキストのスタイル */
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 10px;
+  transition: color 0.3s; /* ホバー時のアニメーション効果 */
+}
+.text-container {
+  height: 20em;       /* 高さを固定（文字サイズに合わせて調整） */
+  line-height: 20em;  /* 文字を上下中央に配置する場合 */
+  overflow: hidden;   /* ★重要：枠外に見み出た文字を非表示にする */
+  position: relative; 
+   
+}
+/* マウスを乗せたときの色変更 */
+.nav-links a:hover {
+  color: #ff9900;
+}
+
     </style>
   </head>
   <body>
-<div class="m">
+<div class="n">
+<nav class="navbar">
+  <div class="nav-container">
+    <!-- ロゴやサイト名 -->
+    <a href="#" class="nav-logo">MONIX!?</a>
     
-      <div class="hero">MONIX</div>
+    <!-- メニューリンク -->
+    <ul class="nav-links">
+      <li><a href="#">ホーム</a></li>
+      <li><a href="#">サービス</a></li>
+      <li><a href="#">会社概要</a></li>
+      <li><a href="#">お問い合わせ</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div class="m">
+<div class="text-container">
+ <div class="hero">MONIX</div>
+</div>
+
+      
+</div>
 </div>
    </body>
    </html>
